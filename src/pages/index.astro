@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Presentation from '../components/Presentation.astro';
+import Skills from '../components/Skills.astro';
+import Proyectos from '../components/Proyectos.astro';
+import About from '../components/About.astro';
+import Footer from '../components/Footer.astro';
+
+---
+
+<Layout title="Portafolio">
+	<main>
+		<Header />
+		<Presentation />
+		<Proyectos />
+		<Skills />
+		<About />
+		<Footer />
+	</main>
+</Layout>
+
+<style>
+	main {
+		padding-top: 1.5em;
+	}
+
+</style>

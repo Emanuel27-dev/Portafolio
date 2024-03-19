@@ -1,0 +1,87 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+// Supports weights 100-900
+import '@fontsource-variable/onest';
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<ViewTransitions />
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	:root {
+		/* Fonts  */
+		--font-inter: 'Onest Variable', sans-serif;
+
+		/* background */
+		--bg-main: rgb(11, 20, 45);
+
+		/* font colors */
+		--color-title: #E2E8F0;
+		--color-secondary: #94A3B8;
+
+		/* font weigth */
+		--font-bold: 600;
+
+		/* color botons and interface */
+		--color-boton: rgb(54, 53, 54, .95);
+	}
+	html {
+		scroll-behavior: smooth;
+	}
+
+	.light-theme {
+		--bg-main:   #FBFEFD;
+		--color-title: #222;
+		--color-secondary: #141414;
+	}
+
+	.dark-theme {
+		--bg-main: rgb(11, 20, 45);
+		/* --bg-main: purple; */
+		--color-title: #E2E8F0;
+		--color-secondary: #94A3B8;
+	}
+
+	body {
+		font-family: var(--font-inter);
+		background-color: var(--bg-main);
+		color: var(--color-title);
+		min-height: 100vh;
+	}
+
+	.container {
+		margin: 0 auto;
+		max-width: 856px;
+		padding: 0 .8rem;
+		/* border: 1px solid white; */
+	}
+
+	.botonLight {
+		color: var(--color-title);
+	}
+
+</style>
+

@@ -1,0 +1,89 @@
+---
+import ProyectoItem from "../components/ProyectoItem.astro";
+import GithubSVG from "../components/GithubSVG.astro";
+import PreviewSVG from "../components/PreviewSVG.astro";
+---
+
+<section class="proyectos container" id="proyectos">
+    <div>
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            ><path
+                d="m7.375 16.781 1.25-1.562L4.601 12l4.024-3.219-1.25-1.562-5 4a1 1 0 0 0 0 1.562l5 4zm9.25-9.562-1.25 1.562L19.399 12l-4.024 3.219 1.25 1.562 5-4a1 1 0 0 0 0-1.562l-5-4zm-1.649-4.003-4 18-1.953-.434 4-18z"
+            ></path></svg
+        >
+        <span>Proyectos</span>
+    </div>
+
+    <div class="container-flex">
+
+        <ProyectoItem
+            title="To-do App"
+            src="../../public/todo-appShot.png"
+            linkPreview={"https://listapp-enrique27.netlify.app/"}
+            linkGithub={"https://github.com/Emanuel27-dev/Todo-app"}
+        >
+            To-do App es una aplicación que permite a los usuarios agregar nuevas tareas, marcarlas como completadas, eliminar tareas existentes y mantener un registro de sus actividades usando el localStorage del navegador.
+
+            <GithubSVG slot="github-icon"/>
+            <PreviewSVG slot="preview-icon"/>
+        </ProyectoItem>
+
+
+        <ProyectoItem
+            title="Testimonials grid section"
+            src="../../public/block-1.png"
+            linkPreview={"https://gridtestimonialss.netlify.app/"}
+            linkGithub={"https://github.com/Emanuel27-dev/Grid-section"}
+        >
+            En esta sección de testimonios, he utilizado grid layout para crear un diseño flexible y responsivo que muestra un modelo de testimonios de clientes de manera organizada.
+
+            <GithubSVG slot="github-icon"/>
+            <PreviewSVG slot="preview-icon"/>
+        </ProyectoItem>
+
+        <ProyectoItem
+            title={"Fylo landing page"}
+            src="../../public/landing.png"
+            linkPreview={"https://landing-pagefylo.netlify.app/"}
+            linkGithub={"https://github.com/Emanuel27-dev/Landing-Page"}
+
+        >
+            Una landing page que forma parte de los retos de Frontend Mentor, para la maquetación de este layout solo utilice flexbox.
+            
+            <GithubSVG slot="github-icon"/>
+            <PreviewSVG slot="preview-icon"/>
+        </ProyectoItem>
+    </div>
+</section>
+
+<style>
+    .proyectos {
+        font-size: 30px;
+        font-weight: var(--font-bold);
+        margin-bottom: 35px;
+        /* min-height: 1300px; */
+    }
+
+    .proyectos div:first-child {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        margin-bottom: .6em;
+    }
+
+    .proyectos div:first-child svg {
+        width: 35px;
+        height: 35px;
+        fill: var(--color-title);
+    }
+
+    .container-flex {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+</style>
