@@ -2,6 +2,9 @@
 import ProyectoItem from "../components/ProyectoItem.astro";
 import GithubSVG from "../components/GithubSVG.astro";
 import PreviewSVG from "../components/PreviewSVG.astro";
+import ImgBlock from "./../images/block-1.png";
+import ImgLanding from "./../images/landing.png";
+import ImgTodo from "./../images/todo-appShot.png";
 ---
 
 <section class="proyectos container" id="proyectos">
@@ -22,7 +25,7 @@ import PreviewSVG from "../components/PreviewSVG.astro";
 
         <ProyectoItem
             title="To-do App"
-            src="../../public/todo-appShot.png"
+            src={ImgTodo.src}
             linkPreview={"https://listapp-enrique27.netlify.app/"}
             linkGithub={"https://github.com/Emanuel27-dev/Todo-app"}
         >
@@ -35,7 +38,7 @@ import PreviewSVG from "../components/PreviewSVG.astro";
 
         <ProyectoItem
             title="Testimonials grid section"
-            src="../../public/block-1.png"
+            src={ImgBlock.src}
             linkPreview={"https://gridtestimonialss.netlify.app/"}
             linkGithub={"https://github.com/Emanuel27-dev/Grid-section"}
         >
@@ -47,7 +50,7 @@ import PreviewSVG from "../components/PreviewSVG.astro";
 
         <ProyectoItem
             title={"Fylo landing page"}
-            src="../../public/landing.png"
+            src={ImgLanding.src}
             linkPreview={"https://landing-pagefylo.netlify.app/"}
             linkGithub={"https://github.com/Emanuel27-dev/Landing-Page"}
 
