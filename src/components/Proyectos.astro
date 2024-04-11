@@ -5,6 +5,8 @@ import PreviewSVG from "../components/PreviewSVG.astro";
 import ImgBlock from "./../images/block-1.png";
 import ImgLanding from "./../images/landing.png";
 import ImgTodo from "./../images/todo-appShot.png";
+import ImgWeather from "./../images/clima_shot.png"
+import ImgLandingRespo from "./../images/landing-responsive.png"
 ---
 
 <section class="proyectos container" id="proyectos">
@@ -24,6 +26,17 @@ import ImgTodo from "./../images/todo-appShot.png";
     <div class="container-flex">
 
         <ProyectoItem
+            title={'Weather App'}
+            src={ImgWeather.src}
+            linkPreview={"https://climaesc.netlify.app/"}
+            linkGithub={"https://github.com/Emanuel27-dev/weather-app"}
+        >
+            Aplicación del clima desarrollada con react y usando la API de OpenWeatherMap para acceder a información meteorológica.
+            <GithubSVG slot="github-icon"/>
+            <PreviewSVG slot="preview-icon"/>
+        </ProyectoItem>
+
+        <ProyectoItem
             title="To-do App"
             src={ImgTodo.src}
             linkPreview={"https://listapp-enrique27.netlify.app/"}
@@ -37,12 +50,12 @@ import ImgTodo from "./../images/todo-appShot.png";
 
 
         <ProyectoItem
-            title="Testimonials grid section"
-            src={ImgBlock.src}
-            linkPreview={"https://gridtestimonialss.netlify.app/"}
-            linkGithub={"https://github.com/Emanuel27-dev/Grid-section"}
+            title="Sunnyside agency landing page"
+            src={ImgLandingRespo.src}
+            linkPreview={"https://landingsunnysideagency.netlify.app/"}
+            linkGithub={"https://github.com/Emanuel27-dev/Landing-Page-sunnyside-agency"}
         >
-            En esta sección de testimonios, he utilizado grid layout para crear un diseño flexible y responsivo que muestra un modelo de testimonios de clientes de manera organizada.
+            Landing page con react, he utilizado grid layout para crear un diseño flexible y responsivo. 
 
             <GithubSVG slot="github-icon"/>
             <PreviewSVG slot="preview-icon"/>
